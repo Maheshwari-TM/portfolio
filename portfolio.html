@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Maheswari| Flutter Developer</title>
+<meta name="description" content="Flutter developer with 2+ years of experience building cross-platform mobile apps with Flutter and Firebase.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0f;--border:#1e1e2e;--accent:#00e5ff;--accent2:#7c3aed;--text:#e8e8f0;--muted:#8a8aa0;--card:#13131c;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:110}
+a{color:inherit}a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 4rem;background:rgba(10,10,15,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:var(--accent);text-decoration:none}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-links a.cv{color:var(--accent);border:1px solid var(--accent);padding:.35rem .8rem;border-radius:3px}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:space-between;gap:3rem;padding:8rem 4rem 4rem;position:relative;overflow:hidden;max-width:none}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 50%,rgba(0,229,255,.07),transparent 60%),radial-gradient(ellipse 40% 40% at 20% 80%,rgba(124,58,237,.1),transparent 60%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,229,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,.03) 1px,transparent 1px);background-size:60px 60px}
+.hero-content{position:relative;z-index:2;max-width:820px}
+.hero-name{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,6vw,5rem);font-weight:800;line-height:1.05;letter-spacing:-.03em;margin-bottom:.6rem;animation:fadeUp .7s .1s ease both}
+.outline{-webkit-text-stroke:1px var(--accent);color:transparent}
+.hero-sub{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:1.5rem}
+.hero-role{font-size:clamp(.8rem,1.5vw,1rem);color:var(--muted);margin-bottom:2.5rem;line-height:1.8;max-width:600px;animation:fadeUp .7s .2s ease both}
+.hero-role strong{color:var(--text)}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp .7s .3s ease both}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.6rem;font:500 .78rem 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all .2s}
+.btn-primary{background:var(--accent);color:#000}.btn-primary:hover{background:#fff;transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,229,255,.3)}
+.btn-ghost{border:1px solid var(--border);color:var(--muted)}.btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.hero-visual{position:relative;z-index:2;flex-shrink:0;perspective:1000px}
+.mockup-wrapper{animation:floatW 6s ease-in-out infinite;transform:rotateY(-15deg) rotateX(5deg)}
+.mockup-phone{width:250px;height:500px;background:#0a0a0f;border:8px solid #2a2a3e;border-radius:40px;position:relative;box-shadow:0 10px 40px rgba(0,229,255,.12);overflow:hidden}
+.mockup-phone::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:110px;height:22px;background:#2a2a3e;border-radius:0 0 16px 16px;z-index:10}
+.mockup-screen{width:100%;height:100%;background:radial-gradient(circle at top right,rgba(124,58,237,.15),transparent 70%),radial-gradient(circle at bottom left,rgba(0,229,255,.12),transparent 70%);display:flex;flex-direction:column;position:relative}
+.mockup-app-bar{height:70px;background:rgba(19,19,28,.95);border-bottom:1px solid var(--border);display:flex;align-items:flex-end;padding:0 1.3rem 12px;font:700 .8rem 'Syne',sans-serif}
+.mockup-body{flex:1;padding:1.3rem;display:flex;flex-direction:column;gap:.9rem}
+.mockup-card{height:58px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:.7rem .9rem;font-size:.65rem;color:var(--muted);display:flex;flex-direction:column;justify-content:center;gap:.2rem}
+.mockup-card b{color:var(--accent);font-weight:500}
+.mockup-fab{position:absolute;bottom:28px;right:22px;width:48px;height:48px;background:var(--accent);border-radius:50%;display:grid;place-items:center;color:#000;font-size:1.5rem;font-weight:600}
+@keyframes floatW{50%{transform:translateY(-10px) rotateY(-15deg) rotateX(5deg)}}
+section{padding:6rem 4rem;max-width:1200px;margin:0 auto;overflow-wrap:break-word}
+.section-title{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.02em;margin-bottom:3rem;line-height:1.1}
+.timeline-item{display:grid;grid-template-columns:180px 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--border);opacity:0;transform:translateY(30px);transition:opacity .7s ease-out,transform .7s ease-out,background .2s;min-width:0}
+.timeline-item.visible{opacity:1;transform:none}.timeline-item:first-child{border-top:1px solid var(--border)}
+.timeline-item:hover{background:rgba(0,229,255,.025)}.timeline-item>*{min-width:0}
+.timeline-date{font-size:.72rem;color:var(--muted);letter-spacing:.05em;padding-top:.2rem}
+.timeline-dot{display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:50%;margin-right:.5rem;vertical-align:middle}
+.timeline-company{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:.3rem}
+.timeline-company small{color:var(--accent);font-size:.7rem;font-weight:400}
+.timeline-role{font-size:.78rem;color:var(--accent);letter-spacing:.05em;margin-bottom:.8rem}
+.timeline-desc{font-size:.82rem;color:var(--muted);line-height:1.8}
+.timeline-desc a{color:var(--accent)}
+.project-list{margin-top:1rem;display:flex;flex-direction:column;gap:.5rem}
+.proj-item{display:flex;align-items:baseline;gap:.5rem;font-size:.78rem;line-height:1.6;flex-wrap:wrap;margin-top:.4rem}
+.proj-dot{color:var(--accent)}.proj-name{font-weight:500}
+.proj-name a{color:var(--accent);font-size:.68rem;margin-left:.4rem}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem}
+.skill-card,.project-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:1.5rem;transition:border-color .2s,transform .2s;min-width:0}
+.skill-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.skill-card-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:1rem}
+.skill-tags,.project-tech{display:flex;flex-wrap:wrap;gap:.5rem}
+.tag{font-size:.68rem;letter-spacing:.05em;padding:.25rem .6rem;border:1px solid var(--border);border-radius:2px;color:var(--muted);transition:all .2s}
+.tag:hover{border-color:var(--accent);color:var(--accent)}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
+.project-card{padding:2rem;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--accent),var(--accent2));transform:scaleX(0);transition:transform .3s}
+.project-card:hover::before{transform:scaleX(1)}.project-card:hover{transform:translateY(-4px);border-color:rgba(0,229,255,.25)}
+.project-number{font:800 3rem/1 'Syne',sans-serif;color:var(--border);margin-bottom:1rem}
+.project-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:.75rem}
+.project-desc{font-size:.8rem;color:var(--muted);line-height:1.8;margin-bottom:1.2rem}
+.project-link{margin-top:auto;padding-top:1.2rem;font-size:.78rem;color:var(--accent)}
+.project-link span{color:var(--muted)}
+.contact-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-text{font-size:.85rem;color:var(--muted);line-height:2;margin-bottom:2rem}
+.contact-links{display:flex;flex-direction:column;gap:1rem}
+.contact-link{display:flex;align-items:center;gap:1rem;color:var(--muted);text-decoration:none;font-size:.8rem;transition:color .2s;padding:.75rem;border:1px solid var(--border);border-radius:4px;word-break:break-all}
+.contact-link:hover{color:var(--accent);border-color:var(--accent)}
+.facts{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:2rem;display:flex;flex-direction:column;gap:1rem}
+.facts div{display:flex;justify-content:space-between;gap:1rem;font-size:.78rem;border-bottom:1px solid var(--border);padding-bottom:.75rem}
+.facts div:last-child{border:0;padding:0}.facts span:first-child{color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify-content:space-between;gap:1rem;font-size:.72rem;color:var(--muted)}
+.full-divider{border:none;border-top:1px solid var(--border)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+@media (max-width:1024px){nav{padding:1rem 2rem}.hero{padding:7rem 2rem 4rem}section{padding:5rem 2rem}footer{padding:2rem}.timeline-item{grid-template-columns:1fr;gap:.4rem}.contact-wrapper{gap:2rem}}
+@media (max-width:768px){nav{padding:.8rem 1.2rem;flex-wrap:wrap;justify-content:center}.nav-links{gap:1rem;flex-wrap:wrap;justify-content:center}.nav-links a{font-size:.68rem}
+.hero{padding:9rem 1.5rem 3rem;flex-direction:column;text-align:center;min-height:auto}.hero-content{display:flex;flex-direction:column;align-items:center}.hero-cta{justify-content:center}.hero-visual{transform:scale(.85)}
+section{padding:4rem 1.5rem}.projects-grid,.contact-wrapper{grid-template-columns:1fr}footer{flex-direction:column;text-align:center}}
+@media (max-width:480px){.hero{padding:9.5rem 1rem 3rem}section{padding:3rem 1rem}.hero-visual{transform:scale(.7);margin:-3rem 0}.skills-grid{grid-template-columns:1fr}.project-card{padding:1.25rem}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.timeline-item{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="#home">&#9670; Maheswari</a>
+  <div class="nav-links">
+    <a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    <a class="cv" href="https://drive.google.com/file/d/1AoY8dYy0mi8I6Y3QQ17EI-Cf8twhxYqz/view?usp=drive_link" download>Download CV</a>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-bg"></div><div class="hero-grid"></div>
+  <div class="hero-content">
+    <h1 class="hero-name">Maheswari <span class="outline"> </span></h1>
+    <p class="hero-sub outline">Flutter Developer</p>
+    <p class="hero-role">Mobile engineer building cross-platform apps with Flutter, <strong>2+ years</strong> of experience.<br>
+      Focused on <strong>Clean Architecture</strong>, <strong>BLoC / Provider</strong>, and <strong>Firebase</strong> real-time data with <strong>Google Maps</strong> location features.<br>
+      Based in Kurnool, Andhra Pradesh, India.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">&#9654; Get in touch</a>
+      <a href="#experience" class="btn btn-ghost">View experience</a>
+    </div>
+  </div>
+  <div class="hero-visual reveal" aria-hidden="true">
+    <div class="mockup-wrapper"><div class="mockup-phone"><div class="mockup-screen">
+      <div class="mockup-app-bar">Kooli</div>
+      <div class="mockup-body">
+        <div class="mockup-card"><b>Nearby providers</b>Within your chosen radius</div>
+        <div class="mockup-card" style="width:80%"><b>Live data</b>Synced from Firestore</div>
+        <div class="mockup-card" style="width:60%"><b>Alerts</b>Push via FCM</div>
+      </div>
+      <div class="mockup-fab">+</div>
+    </div></div></div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="reveal"><h2 class="section-title">Experience</h2></div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date"><span class="timeline-dot"></span>Certificates issued Sep 2026</div>
+      <div>
+        <div class="timeline-company">YuvaIntern <small>&middot; Internships</small></div>
+        <div class="timeline-role">Junior Mobile App Developer Intern &middot; Junior Django Developer Intern</div>
+        <div class="timeline-desc">Completed both internships and received a Certificate of Experience for each.
+          <a href="https://d1d5cy0fmpy9m8.cloudfront.net/images/yuvaintern/completion_letters/completion-letter-127802_410838_1787751482.pdf">Mobile certificate</a> &middot;
+          <a href="https://d1d5cy0fmpy9m8.cloudfront.net/images/yuvaintern/completion_letters/completion-letter-127802_439901_1791806606.pdf">Django certificate</a></div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date"><span class="timeline-dot"></span>Jan 2023 &mdash; Apr 2025</div>
+      <div>
+        <div class="timeline-company">SmartAI Digital Solutions <small>&middot; Kurnool</small></div>
+        <div class="timeline-role">Associate Application Developer (Flutter)</div>
+        <div class="timeline-desc">Developed and maintained cross-platform Flutter applications for Android, working with cross-functional teams to design, build and deliver new features.</div>
+        <div class="project-list">
+          <div class="proj-item"><span class="proj-dot">&#9656;</span><span class="proj-name">Firebase Authentication and Cloud Firestore</span></div>
+          <div class="timeline-desc">Implemented real-time data synchronization across the app.</div>
+          <div class="proj-item"><span class="proj-dot">&#9656;</span><span class="proj-name">Google Maps APIs</span></div>
+          <div class="timeline-desc">Integrated location-based service discovery and radius-based filtering.</div>
+          <div class="proj-item"><span class="proj-dot">&#9656;</span><span class="proj-name">Git and GitHub</span></div>
+          <div class="timeline-desc">Managed source code using version control best practices.</div>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date"><span class="timeline-dot"></span>Nov 2022 &mdash; May 2023</div>
+      <div>
+        <div class="timeline-company">SmartAI Digital Solutions <small>&middot; Kurnool</small></div>
+        <div class="timeline-role">Python Development Intern</div>
+        <div class="timeline-desc">Assisted with backend development using Python and Django, worked on RESTful API development and data processing tasks, and debugged backend and application issues.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="full-divider">
+
+<section id="skills">
+  <div class="reveal"><h2 class="section-title">Skills</h2></div>
+  <div class="skills-grid reveal">
+    <div class="skill-card"><div class="skill-card-title">&#128241; Mobile &amp; Languages</div><div class="skill-tags"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Python</span></div></div>
+    <div class="skill-card"><div class="skill-card-title">&#127959;&#65039; Architecture</div><div class="skill-tags"><span class="tag">Clean Architecture</span><span class="tag">Repository Pattern</span></div></div>
+    <div class="skill-card"><div class="skill-card-title">&#9889; State Management</div><div class="skill-tags"><span class="tag">BLoC</span><span class="tag">Provider</span></div></div>
+    <div class="skill-card"><div class="skill-card-title">&#128293; Backend &amp; Data</div><div class="skill-tags"><span class="tag">Firebase Auth</span><span class="tag">Cloud Firestore</span><span class="tag">Cloud Functions</span><span class="tag">Django</span><span class="tag">REST APIs</span><span class="tag">SQLite</span></div></div>
+    <div class="skill-card"><div class="skill-card-title">&#128506;&#65039; Maps &amp; Location</div><div class="skill-tags"><span class="tag">Google Maps</span><span class="tag">Geolocator</span><span class="tag">Radius search</span></div></div>
+    <div class="skill-card"><div class="skill-card-title">&#128736;&#65039; Tools</div><div class="skill-tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Android Studio</span><span class="tag">VS Code</span></div></div>
+  </div>
+</section>
+<hr class="full-divider">
+
+<section id="projects">
+  <div class="reveal"><h2 class="section-title">Projects</h2></div>
+  <div class="projects-grid reveal">
+    <div class="project-card"><div class="project-number">01</div><div class="project-title">Kooli</div>
+      <div class="project-desc">Location-based services marketplace that connects users with nearby providers in automobile, house services, travel, hotels and healthcare. Phone OTP and email login, map markers, radius discovery and push notifications.</div>
+      <div class="project-tech"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Google Maps</span><span class="tag">BLoC</span><span class="tag">FCM</span></div>
+      <div class="project-link"><a href="https://youtu.be/ZW8BZoGhnUQ?si=UmzqhCE8HIyjCqdJ">Watch demo</a> <span>&middot; client app, unpublished</span></div></div>
+    <div class="project-card"><div class="project-number">02</div><div class="project-title">FitPulse</div>
+      <div class="project-desc">Flutter practice app covering UI, REST API integration, local authentication, theme support and automated tests.</div>
+      <div class="project-tech"><span class="tag">Flutter</span><span class="tag">REST APIs</span><span class="tag">Local storage</span><span class="tag">Testing</span></div>
+      <div class="project-link"><a href="https://github.com/Maheshwari-TM/fitpulse">View on GitHub</a></div></div>
+    <div class="project-card"><div class="project-number">03</div><div class="project-title">Blog_Dev</div>
+      <div class="project-desc">Django blog with registration, login, profiles and access control. Cut homepage queries from 17 to 2, added pagination and layered caching, backed by 50 tests.</div>
+      <div class="project-tech"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">Caching</span><span class="tag">Testing</span></div>
+      <div class="project-link"><a href="https://github.com/Maheshwari-TM/Blog_Dev">View on GitHub</a></div></div>
+  </div>
+</section>
+<hr class="full-divider">
+
+<section id="contact">
+  <div class="reveal"><h2 class="section-title">Contact</h2></div>
+  <div class="contact-wrapper reveal">
+    <div>
+      <p class="contact-text">Open to Flutter and mobile application developer roles.<br>Email or call me to talk.</p>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:tmmaheswari24@gmail.com">&#9993;&#65039; tmmaheswari24@gmail.com</a>
+        <a class="contact-link" href="https://github.com/Maheshwari-TM">&#128025; github.com/Maheshwari-TM</a>
+        <a class="contact-link" href="https://www.linkedin.com/in/maheswari-medari-2a378723b/">&#128188; linkedin.com/in/maheswari-medari</a>
+        <a class="contact-link" href="https://github.com/Maheshwari-TM/Blog_Dev">&#128221; Blog: github.com/Maheshwari-TM/Blog_Dev</a>
+        <a class="contact-link" href="tel:+919542933910">&#128222; +91 9542933910</a>
+      </div>
+    </div>
+    <div class="facts">
+      <div><span>Experience</span><span>2+ Years</span></div>
+      <div><span>Companies</span><span>2 (SmartAI, YuvaIntern)</span></div>
+      <div><span>Availability</span><span style="color:var(--accent)">Open to offers</span></div>
+      <div><span>Location</span><span>Andhra Pradesh, India &#127470;&#127475;</span></div>
+    </div>
+  </div>
+</section>
+</main
+
+<footer><span>&copy; 2026 Maheswari Thammineni Medari </span><span>Flutter Developer Portfolio</span></footer>
+
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.reveal,.timeline-item').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
